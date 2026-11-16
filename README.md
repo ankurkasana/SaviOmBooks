@@ -1,4 +1,4 @@
-# Pargyan Bookstore (React)
+# SaviOmCreations Bookstore (React)
 
 A responsive bookstore storefront plus a seller dashboard demo built with React, Vite and Lucide icons.
 
