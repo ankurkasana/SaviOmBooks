@@ -119,15 +119,7 @@ const initialBooks = [
   },
 ];
 const categories = [
-  "All Books",
-  "Fiction",
-  "Academic",
-  "Technology",
-  "Self Help",
-  "Science",
-  "Business",
-  "Biography",
-  "Children",
+  
 ];
 const money = (n) => "₹" + Number(n).toLocaleString("en-IN");
 function read(key, fallback) {
@@ -241,7 +233,7 @@ function App() {
     setCustomer(c);
     save("pg_customer", c);
     setShowAuth(false);
-    toast("Welcome to SaviOmCreations!");
+    toast("Welcome to SaviOmBooks!");
   };
   const openAdd = () => {
     setEditing(null);
@@ -346,7 +338,7 @@ function App() {
           <span>Easy Returns</span>
           <span>24/7 Customer Support</span>
           <span className="top-right">
-            Welcome to SaviOmCreations!　 |　{" "}
+            Welcome to  reations!　 |　{" "}
             {customer ? customer.name : "Read • Learn • Grow"}
           </span>
         </div>
@@ -361,7 +353,7 @@ function App() {
               <BookOpen size={34} />
             </span>
             <span>
-              <strong>SaviOmCreations</strong>
+              <strong>SaviOmBooks</strong>
               <small>Read · Learn · Grow</small>
             </span>
           </button>
@@ -386,7 +378,7 @@ function App() {
             </button>
             <button onClick={() => nav("cart")} className="cart-link">
               <ShoppingCart />
-              <span>Cart</span>
+              {/* <span>Cart</span> */}
               <i>{cartCount}</i>
             </button>
             <button
@@ -403,18 +395,21 @@ function App() {
         <div className="container nav-inner">
           <button onClick={() => nav("home")}>Home</button>
           <button onClick={() => nav("books")}>Books</button>
-          <button onClick={() => nav("books")}>Categories</button>
-          <button
+          {/* <button onClick={() => nav("books")}>Categories</button> */}
+          {/* <button
             onClick={() => {
               setCategory("All Books");
               nav("books");
             }}
           >
             Bestsellers
-          </button>
-          <button onClick={() => nav("books")}>New Arrivals</button>
-          <button onClick={() => nav("seller")}>Seller Dashboard</button>
+          </button> */}
+          
           <button onClick={() => nav("about")}>About Us</button>
+            <button onClick={() => nav("carrier")}>Carrier</button>
+
+
+
         </div>
       </nav>
     </>
@@ -425,7 +420,7 @@ function App() {
         <div>
           <div className="brand footer-brand">
             <BookOpen />
-            <strong>SaviOmCreations</strong>
+            <strong>SaviOmBooks</strong>
           </div>
           <p>
             Your one-stop destination for books that inspire, educate and
@@ -440,13 +435,13 @@ function App() {
         </div>
         <div>
           <h4>Customer Support</h4>
-          <p>help@SaviOmCreations.in</p>
+          <p>help@SaviOmBooks.com</p>
           <p>Mon–Sat, 9 AM–6 PM</p>
         </div>
         <div>
           <h4>Stay Connected</h4>
           <p>Read more. Learn more. Grow more.</p>
-          <p>© 2026 SaviOmCreations. All rights reserved.</p>
+          <p>© 2026 SaviOmBooks. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -487,7 +482,7 @@ function App() {
     <>
       <section className="hero">
         <div className="hero-content">
-          <span className="eyebrow">WELCOME TO SaviOmCreations</span>
+          <span className="eyebrow">WELCOME TO SaviOmBooks</span>
           <h1>
             Discover Your
             <br />
@@ -523,7 +518,7 @@ function App() {
                 nav("books");
               }}
             >
-              <span>{["📖", "🎓", "💻", "❤️", "🔬", "📈", "👤", "🧸"][i]}</span>
+              {/* <span>{["📖", "🎓", "💻", "❤️", "🔬", "📈", "👤", "🧸"][i]}</span> */}
               {c}
             </button>
           ))}
@@ -764,7 +759,7 @@ function App() {
         <div>
           <span className="eyebrow">STORE MANAGEMENT</span>
           <h1>Seller Dashboard</h1>
-          <p>Manage your SaviOmCreations bookstore.</p>
+          <p>Manage your SaviOmBooks bookstore.</p>
         </div>
         <button className="primary-btn" onClick={openAdd}>
           <Plus /> Add New Book
@@ -1020,8 +1015,181 @@ function App() {
         <Account />
       ) : (
         <main className="container page-pad">
-          <h1>About SaviOmCreations</h1>
+          <h1>About SaviOmBooks</h1>
           <p>Read • Learn • Grow. A bookstore for curious minds.</p>
+
+
+    <main className="container page-pad">
+
+      {/* About Banner */}
+      <section className="about-banner">
+        <span>WELCOME TO SAVIOMBOOKS</span>
+        <h1>About Us</h1>
+        <p>
+          Discover the World of Books, Knowledge and Imagination.
+        </p>
+      </section>
+
+      {/* Introduction */}
+      <section className="about-intro">
+        
+<div className="about-text">
+  <span className="eyebrow">
+    <span className="eyebrow-line"></span>
+    DISCOVER OUR STORY
+  </span>
+
+  <h2>
+    More Than Books, <br />
+    <span className="about-highlight">A World of Possibilities.</span>
+  </h2>
+
+  <p className="about-description">
+    Welcome to <strong>SaviOmBooks</strong> — where every page
+    opens a new world of knowledge, imagination and inspiration.
+    We believe books are not just collections of pages; they are
+    powerful companions that help us learn, grow and dream bigger.
+  </p>
+
+  <p className="about-description">
+    From Fiction and Business to Self-Help, Biography, Education
+    and Personal Development, our carefully selected collection
+    brings together something special for every kind of reader.
+  </p>
+
+  <p className="about-description">
+    Whether you're a student chasing knowledge, a professional
+    building your future, or a passionate reader exploring new
+    adventures, SaviOmBooks is here to make your reading journey
+    meaningful.
+  </p>
+
+  <div className="about-features">
+    <div className="about-feature">
+      <span className="feature-icon">📚</span>
+      <div>
+        <h4>Explore More</h4>
+        <p>Discover inspiring books</p>
+      </div>
+    </div>
+
+    <div className="about-feature">
+      <span className="feature-icon">💡</span>
+      <div>
+        <h4>Learn & Grow</h4>
+        <p>Knowledge for every journey</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <div className="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800"
+            alt="Beautiful library"
+          />
+        </div>
+      </section>
+
+      {/* Mission and Vision */}
+      <section className="mission-grid">
+
+        <div className="mission-card">
+          <div className="mission-icon">🎯</div>
+          <h2>Our Mission</h2>
+          <p>
+            Our mission is to make reading accessible, enjoyable
+            and affordable for everyone. We aim to provide a
+            convenient platform where readers can discover,
+            explore and purchase their favorite books.
+          </p>
+        </div>
+
+        <div className="mission-card">
+          <div className="mission-icon">🌟</div>
+          <h2>Our Vision</h2>
+          <p>
+            Our vision is to create a community of readers
+            and lifelong learners where knowledge is shared,
+            creativity is encouraged and every book opens
+            the door to new opportunities.
+          </p>
+        </div>
+
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="why-choose">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">THE SAVIOMBOOKS EXPERIENCE</span>
+            <h2>Why Choose SaviOmBooks?</h2>
+          </div>
+        </div>
+
+        <div className="choose-grid">
+
+          <div className="choose-card">
+            <span>📚</span>
+            <h3>Wide Book Collection</h3>
+            <p>
+              Explore books from different genres and categories
+              in one convenient place.
+            </p>
+          </div>
+
+          <div className="choose-card">
+            <span>💰</span>
+            <h3>Affordable Prices</h3>
+            <p>
+              Discover great reads at prices that make
+              reading more accessible.
+            </p>
+          </div>
+
+          <div className="choose-card">
+            <span>🚚</span>
+            <h3>Convenient Shopping</h3>
+            <p>
+              Enjoy an easy online shopping experience
+              from browsing to ordering.
+            </p>
+          </div>
+
+          <div className="choose-card">
+            <span>❤️</span>
+            <h3>Reader Focused</h3>
+            <p>
+              We want every reader to discover books
+              that inspire and motivate them.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Brand Message */}
+      <section className="about-message">
+        <h2>Every Book Has a Story. Every Reader Has a Dream.</h2>
+        <p>
+          Start your reading journey with SaviOmBooks.
+          Discover knowledge, explore imagination and
+          make every page count.
+        </p>
+
+        <button
+          className="primary-btn"
+          onClick={() => nav("books")}
+        >
+          Explore Books →
+        </button>
+      </section>
+
+    </main>
+  );
+
+
         </main>
       )}
       <Footer />
@@ -1046,7 +1214,7 @@ function App() {
               <X />
             </button>
             <BookOpen size={36} />
-            <h2>Welcome to SaviOmCreations</h2>
+            <h2>Welcome to SaviOmBooks</h2>
             <p>Login or create your reader account</p>
             <label>
               Your name

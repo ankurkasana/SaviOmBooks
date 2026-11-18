@@ -24,6 +24,107 @@ button {
   cursor: pointer;
   border: 0;
 }
+
+.about-text {
+  flex: 1;
+  padding: 25px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #c58a4a;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.eyebrow-line {
+  width: 35px;
+  height: 2px;
+  background: #c58a4a;
+}
+
+.about-text h2 {
+  color: #243b35;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.about-highlight {
+  color: #c58a4a;
+}
+
+.about-description {
+  color: #666b68;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 15px;
+}
+
+.about-description strong {
+  color: #243b35;
+  font-weight: 800;
+}
+
+.about-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 28px;
+}
+
+.about-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f6f4ee;
+  padding: 15px 18px;
+  border-radius: 12px;
+  border: 1px solid #eee5d8;
+  transition: 0.3s ease;
+}
+
+.about-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(36, 59, 53, 0.10);
+}
+
+.feature-icon {
+  font-size: 27px;
+}
+
+.about-feature h4 {
+  color: #243b35;
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+
+.about-feature p {
+  color: #777;
+  font-size: 12px;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .about-text {
+    padding: 15px 5px;
+  }
+
+  .about-features {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .about-feature {
+    width: 100%;
+  }
+}
+  
 .container {
   width: min(1200px, calc(100% - 48px));
   margin: auto;
